@@ -1,2 +1,2 @@
-# HTML-coding
-I create sites in HTML, CSS and JavaScript
+# HTML-coding bouncy
+Creating landing page in HTML, CSS and JavaScript
