@@ -57,8 +57,6 @@ body {
 	width: 100%;
 	min-height: 100%;
 	overflow: hidden;
-	&.loaded {
-	}
 }
 //</ОБОЛОЧКА>===========================================================================================================
 
@@ -101,9 +99,6 @@ h2 {
 	letter-spacing: 0.7px;
 	max-width: 460px;
 }
-
-.grup-icon {
-}
 .icon {
 	width: 53px;
 	height: 53px;
@@ -140,14 +135,14 @@ h2 {
 
 //<ОСНОВНОЙ БЛОК>====================================================================================================
 .hello {
-	padding: 190px 0px 75px 0px;
+	height: 100vh;
 }
 .hello__colomn {
 	@include flexbox();
 	flex-direction: column;
-	justify-content: center;
+	height: 100%;
 	align-items: center;
-	padding: 0px px;
+	padding: 190px 0px 75px 0px;
 }
 .hello__title {
 	text-align: center;
@@ -167,16 +162,17 @@ h2 {
 	position: relative;
 	flex: 1 1 auto;
 	max-width: 610px;
+	height: 100%;
 	color: #ffffff;
 	font-size: 16px;
 	font-weight: 400;
 	line-height: 28px;
 	letter-spacing: 0.8px;
 	z-index: 2;
-	margin: 0px 0px 220px 0px;
 }
 .hello__arrow {
 	flex: 0 0 36px;
+	position: relative;
 	height: 36px;
 	width: 36px;
 	text-align: center;
@@ -212,18 +208,20 @@ h2 {
 }
 //====================================================================================================
 .bouncy {
-	padding: 100px 0px;
+	padding: 0px 0px 80px 0px;
 }
 .bouncy__row {
 	@include flexbox();
 	justify-content: space-between;
-	flex-wrap: wrap;
 	padding: 0px 150px;
 }
 .bouncy__colomn {
 	@include flexbox();
 	flex-direction: column;
 	justify-content: center;
+	&:last-child {
+		margin: 0;
+	}
 }
 .bouncy__title {
 	margin: 0px 0px 50px 0px;
@@ -234,15 +232,23 @@ h2 {
 	max-width: 466px;
 }
 @media (max-width: $md1+px) {
+	.bouncy {
+		padding: 50px 0px;
+	}
 }
 @media (max-width: $md2+px) {
+	.bouncy {
+		margin: -50px 0px 0px 0px;
+	}
 	.bouncy__row {
+		flex-direction: column;
 		padding: 0px 20px;
 		align-items: center;
 	}
-	.bouncy__title {
-	}
 	.bouncy__text {
+		max-width: none;
+		align-self: center;
+		text-align: justify;
 		margin: 0px;
 	}
 	.bouncy__colomn {
@@ -254,8 +260,6 @@ h2 {
 	}
 	.bouncy__item {
 		background-color: #aa6;
-	}
-	.bouncy__item img {
 	}
 }
 @media (max-width: $md3+px) {
@@ -276,41 +280,56 @@ h2 {
 	justify-content: space-between;
 }
 
-.details__icon {
-	padding: 60px 0px;
+.details-tabs {
 	@include flexbox();
-	& .icon {
-		margin: 0px 27px 0px 0px;
-	}
-	& .icon:nth-child(1) {
-		padding: 12px 0px 8px 0px;
-	}
-	& .icon:nth-child(2) {
-		padding: 8px 0px 12px 0px;
-	}
-	& .icon:nth-child(3) {
-		padding: 10px 0px 10px 0px;
-	}
-	& .icon:last-child {
-		margin: 0px;
-	}
+	align-items: center;
+	justify-content: center;
+	padding: 80px 0px;
 	& .active {
 		background-color: #19bd9a;
 	}
+	&__nav {
+		@include flexbox();
+		flex-direction: column;
+		margin: 0px 45px 0px 0px;
+	}
+	&__link {
+		margin: 0px 0px 15px 0px;
+		height: 53px;
+		width: 53px;
+		background-color: #81868e;
+		border-radius: 50%;
+		flex: 0 0 53px;
+		@include flexbox();
+		justify-content: center;
+		& img {
+			max-width: 100%;
+		}
+	}
+	&__content {
+		align-self: center;
+		@include flexbox();
+		flex-direction: column;
+	}
+	&__item {
+		@include flexbox();
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+	}
 }
 
-.details__subtitle {
+.details-tabs__subtitle {
 	color: #464646;
 	font-size: 20px;
 	font-weight: 400;
-	line-height: 125px;
+	line-height: 20px;
+	margin: 0px 0px 30px 0px;
 	letter-spacing: 0.8px;
 	align-self: flex-start;
 }
-.details__text-body {
-	margin: 0px 0px 20px 0px;
-}
-.details__colomn {
+
+.details-tabs__colomn {
 	@include flexbox();
 	justify-content: space-between;
 	& p {
@@ -337,12 +356,55 @@ h2 {
 	letter-spacing: 0.8px;
 }
 
-.details__text-body {
-	display: none;
+@media (max-width: $md1+px) {
+	.details__content {
+		padding: 0px 30px;
+	}
 }
-.details__text-body:target {
-	display: block;
-	flex: 1 1 auto;
+@media (max-width: $md2+px) {
+	.details-tabs__colomn {
+		& p {
+			flex: 0 1 50%;
+			text-align: justify;
+		}
+		& p:last-child {
+			margin: 0px 0px 0px 40px;
+		}
+	}
+}
+@media (max-width: $md3+px) {
+	.details-tabs {
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: 30px 0px;
+		&__nav {
+			flex-direction: row;
+			margin: 0px 0px 30px 0px;
+		}
+		&__link {
+			margin: 0px 20px 0px 0px;
+			&:last-child {
+				margin: 0px 0px 0px 0px;
+			}
+		}
+	}
+	.details-tabs__subtitle {
+		text-align: center;
+		align-self: center;
+	}
+	.details-tabs__colomn {
+		justify-content: space-between;
+		flex-direction: column;
+		& p {
+		}
+		& p:last-child {
+			font-size: 16px;
+			line-height: 25px;
+			letter-spacing: 0.7px;
+			margin: 20px 0px 0px 0px;
+		}
+	}
 }
 //====================================================================================================
 .projects {
@@ -410,6 +472,11 @@ h2 {
 	color: #fff;
 	border: 1px solid #fff;
 }
+
+@media (max-width: $md2+px) {
+}
+@media (max-width: $md3+px) {
+}
 //====================================================================================================
 .services {
 	background-color: #f3f3f3;
@@ -425,8 +492,6 @@ h2 {
 	justify-content: center;
 	align-items: center;
 	margin: 0px 0px 40px 0px;
-}
-.grup-title {
 }
 .projects__text {
 	align-self: center;
@@ -474,9 +539,6 @@ h2 {
 	& img {
 		max-width: 100%;
 	}
-}
-
-.services-tabs__content {
 }
 .services-tabs__item {
 	@include flexbox();

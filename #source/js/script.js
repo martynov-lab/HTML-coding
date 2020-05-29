@@ -1,12 +1,9 @@
-$(document).ready(function(){
-	$('.menu__icon').click(function(event){
+$(document).ready(function () {
+
+	$('.menu__icon').click(function (event) {
 		$('.icon-menu,.menu__body').toggleClass('active');
 	});
-	$('.icon__details').click(function(e){
-		$('.icon__details').toggleClass('active');
-	});
 
-	
 });
 
 
