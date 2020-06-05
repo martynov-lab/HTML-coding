@@ -57,28 +57,7 @@ body {
 	width: 100%;
 	min-height: 100%;
 	overflow: hidden;
-	& h2 {
-		color: #333b46;
-		font-family: SourceSansPro;
-		font-size: 20px;
-		font-weight: 300;
-		line-height: 20px;
-		text-transform: uppercase;
-		letter-spacing: 4px;
-	}
-	& .grup-title {
-		text-align: center;
-	}
-	& .grup-title__title {
-		font-size: 20px;
-		letter-spacing: 4px;
-	}
-	.grup-title__text {
-		padding: 30px 0px 0px 0px;
-		font-size: 14px;
-		letter-spacing: 0.7px;
-		max-width: 460px;
-	}
+
 	.icon {
 		width: 53px;
 		height: 53px;
@@ -90,6 +69,30 @@ body {
 		&img {
 			width: 100%;
 		}
+	}
+}
+.title {
+	@include flexbox();
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+
+	&__main {
+		color: #333b46;
+		font-family: SourceSansPro;
+		font-size: 20px;
+		font-weight: 300;
+		line-height: 20px;
+		text-transform: uppercase;
+		letter-spacing: 4px;
+	}
+	&__text {
+		padding: 30px 0px 0px 0px;
+		font-size: 14px;
+		letter-spacing: 0.7px;
+		max-width: 460px;
+		color: #81868e;
 	}
 }
 //</ОБОЛОЧКА>===========================================================================================================
@@ -223,6 +226,12 @@ body {
 	}
 }
 .bouncy__title {
+	color: #333b46;
+	font-family: SourceSansPro;
+	font-size: 20px;
+	font-weight: 300;
+	text-transform: uppercase;
+	letter-spacing: 4px;
 	margin: 0px 0px 50px 0px;
 }
 .bouncy__text {
