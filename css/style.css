@@ -1814,7 +1814,7 @@ body.ie .ibg img {
 .impressed {
   padding: 50px 0px 50px 0px;
   background-color: #000;
-  position: absolute;
+  position: relative;
   width: 100%;
   max-height: 400px; }
   .impressed:before {
@@ -1913,3 +1913,141 @@ body.ie .ibg img {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column; } }
+
+.portfolio {
+  padding: 80px 0px 100px 0px;
+  background-color: #f3f3f3; }
+  .portfolio__content {
+    padding: 0px 30px; }
+  .portfolio__footer {
+    background-color: #19bd9a; }
+  .portfolio__footer-body {
+    height: 200px;
+    background: url("../../img/Portfolio/bottom_img.png") 0 0/cover no-repeat;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .portfolio__footer-text {
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: 0.8px;
+    margin: 0px 0px 30px 0px; }
+    .portfolio__footer-text span {
+      font-weight: 700; }
+  .portfolio__button {
+    color: #fff;
+    border: 1px solid #fff; }
+
+.portfolio-tabs {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 80px 0px 0px 0px; }
+  .portfolio-tabs .active:before {
+    background-color: #19bd9a; }
+  .portfolio-tabs__nav {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 0;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .portfolio-tabs__link {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 0;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    color: #464646;
+    font-size: 16px;
+    line-height: 12px;
+    margin: 0px 30px 0px 0px; }
+    .portfolio-tabs__link:last-child {
+      margin: 0px 0px 0px 0px; }
+    .portfolio-tabs__link:hover {
+      text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.6); }
+    .portfolio-tabs__link:before {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 30px;
+      bottom: -15px; }
+  .portfolio-tabs__content {
+    margin: 70px 0px 40px 0px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+  .portfolio-tabs__item {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 0;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+  .portfolio-tabs__colomns {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 270px;
+    flex: 0 0 270px; }
+  .portfolio-tabs__img {
+    position: relative;
+    max-width: 100%;
+    margin: 0px 0px 10px 0px; }

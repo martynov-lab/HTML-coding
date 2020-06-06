@@ -798,7 +798,7 @@ body {
 .impressed {
 	padding: 50px 0px 50px 0px;
 	background-color: #000;
-	position: absolute;
+	position: relative;
 	width: 100%;
 	max-height: 400px;
 
@@ -906,6 +906,117 @@ body {
 		flex-direction: column;
 	}
 }
+
+//====================================================================================================
+.portfolio {
+	padding: 80px 0px 100px 0px;
+	background-color: #f3f3f3;
+	&__content {
+		padding: 0px 30px;
+	}
+
+	&__footer {
+		background-color: #19bd9a;
+	}
+
+	&__footer-body {
+		height: 200px;
+		background: url("../../img/Portfolio/bottom_img.png") 0 0 / cover no-repeat;
+		@include flexbox();
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__footer-text {
+		color: #ffffff;
+		font-size: 20px;
+		line-height: 25px;
+		letter-spacing: 0.8px;
+		margin: 0px 0px 30px 0px;
+		& span {
+			font-weight: 700;
+		}
+	}
+
+	&__button {
+		color: #fff;
+		border: 1px solid #fff;
+	}
+}
+.portfolio-tabs {
+	@include flexbox();
+	flex-direction: column;
+	padding: 80px 0px 0px 0px;
+	& .active:before {
+		background-color: #19bd9a;
+	}
+
+	&__nav {
+		@include flexbox();
+		justify-content: center;
+		align-items: center;
+	}
+	&__link {
+		@include flexbox();
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		cursor: pointer;
+		color: #464646;
+		font-size: 16px;
+		line-height: 12px;
+		margin: 0px 30px 0px 0px;
+		&:last-child {
+			margin: 0px 0px 0px 0px;
+		}
+		&:hover {
+			text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.6);
+		}
+		&:before {
+			content: "";
+			position: absolute;
+			height: 2px;
+			width: 30px;
+			bottom: -15px;
+		}
+	}
+
+	&__content {
+		margin: 70px 0px 40px 0px;
+		@include flexbox();
+		flex-direction: column;
+	}
+	&__item {
+		@include flexbox();
+		justify-content: space-between;
+	}
+	&__colomns {
+		@include flexbox();
+		flex-direction: column;
+
+		align-items: center;
+		flex: 0 0 270px;
+	}
+	&__img {
+		position: relative;
+		max-width: 100%;
+		margin: 0px 0px 10px 0px;
+	}
+}
+//====================================================================================================
+
+//====================================================================================================
+
+//====================================================================================================
+
+//====================================================================================================
+
+//====================================================================================================
+
+//====================================================================================================
+
+//====================================================================================================
 
 //====================================================================================================
 

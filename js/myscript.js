@@ -8,7 +8,13 @@ $(".details-tabs__item").not(":first").hide();
 $(".details-tabs .details-tabs__link").click(function () {
   $(".details-tabs .details-tabs__link").removeClass("active").eq($(this).index()).addClass("active");
   $(".details-tabs__item").hide().eq($(this).index()).fadeIn()
-}).eq(0).addClass("active")
+}).eq(0).addClass("active");
+
+$(".portfolio-tabs__item").not(":first").hide();
+$(".portfolio-tabs .portfolio-tabs__link").click(function () {
+  $(".portfolio-tabs .portfolio-tabs__link").removeClass("active").eq($(this).index()).addClass("active");
+  $(".portfolio-tabs__item").hide().eq($(this).index()).fadeIn()
+}).eq(0).addClass("active");
 
 var target = $('.grafic__counter');
 var targetPos = target.offset().top;
