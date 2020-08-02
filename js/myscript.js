@@ -78,12 +78,80 @@ $(function () {
 });
 
 $(document).ready(function () {
-  $('.slider').slick({
+  $('.team-slider').slick({
     arrows: false,
     dots: true,
     speed: 1000,
     slidesToShow: 1,
     // fade: true,
     // cssEase: 'linear'
+  });
+
+  $('.testimonials-slider').slick({
+    arrows: false,
+    dots: true,
+    speed: 1000,
+    slidesToShow: 1,
+    // fade: true,
+    // cssEase: 'linear'
+  });
+});
+
+
+const itemParent = document.querySelector('.price__colomns'),
+  itemTop = itemParent.querySelectorAll('.price__item-top'),
+  itemBottom = itemParent.querySelectorAll('.price__item-bottom'),
+  item = document.querySelectorAll('.price__item'),
+  buttonPrice = document.querySelectorAll('.price__button');
+
+function mouseover(numberElementMouseover) {
+  itemTop.forEach((item, i) => {
+    if (numberElementMouseover === i) {
+      item.classList.add('hidden');
+      item.classList.remove('show', 'fade');
+    }
+  });
+
+  itemBottom.forEach((item, i) => {
+    if (numberElementMouseover === i) {
+      item.classList.add('show', 'fade');
+      item.classList.remove('hidden');
+    }
+
+  });
+}
+
+function mouseout(numberElementmouseout) {
+  itemTop.forEach((item, i) => {
+    if (numberElementmouseout === i) {
+      item.classList.add('show', 'fade');
+      item.classList.remove('hidden');
+    }
+  });
+
+  itemBottom.forEach((item, i) => {
+    if (numberElementmouseout === i) {
+      item.classList.add('hidden');
+      item.classList.remove('show', 'fade');
+    }
+  });
+}
+
+
+item.forEach((item, i) => {
+  item.addEventListener('mouseover', function () {
+    mouseover(i);
+  });
+});
+
+item.forEach((item, i) => {
+  item.addEventListener('mouseout', function () {
+    mouseout(i);
+  });
+});
+
+buttonPrice.forEach((btn, i) => {
+  btn.addEventListener('click', function () {
+    alert(`Был клик на ${i + 1} кнопку`);
   });
 });
